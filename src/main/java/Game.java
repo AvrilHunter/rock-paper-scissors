@@ -1,6 +1,6 @@
 public class Game {
 
-    private boolean isDraw(String userGuess, String compGuess){
+    public static boolean isDraw(String userGuess, String compGuess){
         return userGuess.equals(compGuess);
     }
 
@@ -19,12 +19,13 @@ public class Game {
     }
 
     public String outcome(String userGuess, String compGuess){
+        System.out.println("Its "+ userGuess+ " vs "+compGuess);
         if(isDraw(userGuess, compGuess)){
-            return "draw";
+            return "Draw";
         } else if (isUserWinner(userGuess, compGuess)) {
-            return "User is the winner";
+            return "User is the winner!";
         }else{
-            return "Computer is the winner";
+            return "You lost :(";
         }
     }
 

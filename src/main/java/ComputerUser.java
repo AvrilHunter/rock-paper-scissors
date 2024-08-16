@@ -3,8 +3,9 @@ public class ComputerUser {
     private String guess;
 
     public ComputerUser(){
-        this.randomNum = (int)((Math.random() * 3)+1);
-        convertNumToGuess(this.randomNum);
+//        this.randomNum = (int)((Math.random() * 3)+1);
+//        convertNumToGuess(this.randomNum);
+        this.guess ="paper";
     }
 
     public void convertNumToGuess(int num){
@@ -25,4 +26,10 @@ public class ComputerUser {
         return guess;
     }
 
+    public void setGuess() {
+//        this.randomNum = (int)((Math.random() * 3)+1);
+//        convertNumToGuess(this.randomNum);
+        this.guess = "paper";
+        System.out.println("Comp guess is now "+guess);
+    }
 }
