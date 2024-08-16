@@ -33,8 +33,10 @@ public class Game {
     }
     private void declareWinner(User myUser, ComputerUser compUser){
         if(isUserWinner(myUser.getGuess(), compUser.getGuess())){
-            System.out.println(myUser.getName()+" is the winner!");
-        }else{System.out.println("Unfortunately you lost - better luck next time");}
+            System.out.println(myUser.getGuess() + " beat " +compUser.getGuess()+ ": "+ myUser.getName()+" is the winner!");
+        }else{
+            System.out.println(compUser.getGuess() + " beat " +myUser.getGuess()+":- unfortunately you lost - better luck next time");
+        playAgain(myUser, compUser);}
     }
     private static boolean isDraw(String userGuess, String compGuess){
         return userGuess.equals(compGuess);
