@@ -5,5 +5,6 @@ public class App {
         ComputerUser compUser = new ComputerUser();
         Game myGame = new Game();
         myGame.startGame(myUser, compUser);
+        myGame.playAgain(myUser, compUser);
     }
 }
