@@ -8,7 +8,7 @@ public class ComputerUser {
         this.guess ="paper";
     }
 
-    public void convertNumToGuess(int num){
+    private void convertNumToGuess(int num){
         switch(num){
             case 1:
                 guess = "rock";
@@ -30,6 +30,5 @@ public class ComputerUser {
 //        this.randomNum = (int)((Math.random() * 3)+1);
 //        convertNumToGuess(this.randomNum);
         this.guess = "paper";
-        System.out.println("Comp guess is now "+guess);
     }
 }

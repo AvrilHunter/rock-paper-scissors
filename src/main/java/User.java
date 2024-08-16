@@ -5,6 +5,18 @@ public class User {
     private String name;
     private String guess;
 
+    public User(){
+        setName();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(){
+        System.out.println("Please enter your name");
+        name = userInput.nextLine();
+    }
 
     public void selectGuess(){
         guess = userInput.next();
