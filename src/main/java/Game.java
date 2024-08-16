@@ -2,7 +2,7 @@ public class Game {
 
     public void startGame(User myUser, ComputerUser compUser) {
         System.out.println("Enter guess of rock, paper or scissors");
-        myUser.selectGuess();
+        myUser.setUserGuess();
         if (isDraw(myUser.getGuess(), compUser.getGuess())) {
             replayGame(myUser, compUser);
         } else {
@@ -12,7 +12,7 @@ public class Game {
 
     private void replayGame(User myUser, ComputerUser compUser) {
         System.out.println("It was a draw! To play again enter guess of rock, paper or scissors");
-        myUser.selectGuess();
+        myUser.setUserGuess();
         compUser.setGuess();
         if (isDraw(myUser.getGuess(), compUser.getGuess())) {
             replayGame(myUser, compUser);
@@ -44,6 +44,5 @@ public class Game {
             return false;
         }else return true; //this covers last option (userGuess.equals("paper") && compGuess.equals("rock")
     }
-
     }
 

@@ -18,8 +18,14 @@ public class User {
         name = userInput.nextLine();
     }
 
-    public void selectGuess(){
-        guess = userInput.next();
+    public void setUserGuess(){
+         String usersGuess = userInput.next().toLowerCase();
+        if(usersGuess.equalsIgnoreCase("rock")|| usersGuess.equalsIgnoreCase("paper")||usersGuess.equalsIgnoreCase("scissors")){
+            guess =usersGuess;
+        }else{
+            System.out.println("Please enter a valid response!");
+            setUserGuess();
+        }
     }
 
     public String getGuess(){
