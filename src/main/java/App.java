@@ -1,10 +1,15 @@
 public class App {
 
-    public static void main(String[] args) {
-       User myUser = new User();
-        ComputerUser compUser = new ComputerUser();
-        Game myGame = new Game();
-        myGame.startGame(myUser, compUser);
-        myGame.playAgain(myUser, compUser);
+        public static String userName;
+
+        public static void main(String[] args) {
+            UserInput nameInput = new UserInput();
+            userName = nameInput.setName();
+            Player humanTestPlayer = new HumanPlayer(userName);
+            Player compTestPlayer = new ComputerPlayer("computer");
+            GamePlay myGame = new GamePlay(humanTestPlayer, compTestPlayer);
+            myGame.playGame();
+        }
     }
-}
+
+
